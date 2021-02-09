@@ -8,8 +8,11 @@ import $ from 'jquery';
 
 
 import './js/common'
+import './js/polzunki'
+import './js/select'
+
 // import './js/header'
-// import './js/modal'
+import './js/modal'
 // import './js/contacts'
 // import './js/tabs'
 // import './js/work'
@@ -24,18 +27,22 @@ import './js/common'
 
 
 // slick;
-// import "slick-carousel";
-// import "./js/mySlick.js";
-// import './css/slick.css';
+import "./js/mySlick.js";
+import "./js/slick.js";
+
 
 // import "./js/plyr.js";
-// import './css/fonts.css'
+
 // import './css/plyr.css';
 
 // import './css/main.css';
 
 
-// главный файл стилей
+
+
 import './sass/style.sass';
 
 
+import "./css/fonts.css";
+import "./css/polzunki.css";
+import "./css/slick.css";
