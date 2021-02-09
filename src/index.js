@@ -40,6 +40,16 @@ import "./js/slick.js";
 
 
 
+// подключение fancybox 
+import "./css/jquery.fancybox.css";
+
+
+
+
+
+
+
+
 import './sass/style.sass';
 
 

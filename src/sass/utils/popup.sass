@@ -5,15 +5,13 @@
   top: 0
   left: 0
   +bg(rgba(0, 0, 0, 0.8))
-  // overflow: scroll
   display: none
   z-index: 1000
   &__overlay
     width: 100%
     min-height: 100vh
     background-color: rgba(0, 0, 0, 0.56)
-    // overflow: scroll
-    z-index: 1000  //-------------- !!!
+    z-index: 1000  
     +center()
   &__inner
     position: relative
@@ -22,9 +20,12 @@
     +bg(  #ff9419)
     border: 30px solid DARKSLATEGRAY
     border-radius: 10px
-    z-index: 1010   //-------------- !!!
+    z-index: 1010   
 
 .popup__close
   +absolute(20px,20px,-20px,auto,-20px,0%,0%)
   &:hover
     cursor: pointer
+
+
+
