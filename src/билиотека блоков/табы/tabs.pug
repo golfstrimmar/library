@@ -1,3 +1,25 @@
+//- // клюевые параметры
+//-   // -- 
+//- // .tabs-item
+//-   // height: 40px
+//-   // width: 200px
+
+//- // .tabs-drop
+//- //   +absolute(100%,auto,40px,0,auto,0%,0%)
+
+
+
+section#tabs.tabs
+          .tabs-item
+              .tabs-item__title.tabs-title-js одиночный таб
+                i.icon-chevron-down.tabs-item__img.tabs-img-js
+              .tabs__drop.tabs-drop.tabs-drop-js
+                  .tabs-drop__info Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eum impedit eveniet dolorum illum eaque quam animi inventore nisi perferendis.
+
+
+
+
+
 section#tabs.tabs
     .tabs__wrapper.container
       h2.title Табы работают независимо друг от друга на одном скрипте.
@@ -11,7 +33,6 @@ section#tabs.tabs
 
         each item in items
           li.tabs__item.tabs-item
-            .tabs-item__body
               .tabs-item__title.tabs-title-js=item.title 
                 i.icon-chevron-down.tabs-item__img.tabs-img-js
               .tabs__drop.tabs-drop.tabs-drop-js

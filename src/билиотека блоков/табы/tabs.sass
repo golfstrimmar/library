@@ -1,3 +1,21 @@
+
+// клюевые параметры
+  // -- 
+// .tabs-item
+  // height: 40px
+  // width: 200px
+
+// .tabs-drop
+//   +absolute(100%,auto,40px,0,auto,0%,0%)
+  
+  
+  
+  
+  
+  
+  
+  
+  
 .tabs
   +bg($active)
 .tabs__wrapper
@@ -22,9 +40,14 @@
   +bg(lighten($active,20%))
   +border(1px,darken($active, 30%))
   min-height: 40px
-  max-height: 40px
+  // max-height: 40px
+  // max-height: 40px
   width: 200px
   transition: all 0.2s ease-in-out
+  // +pro
+  +center
+  position: relative
+
   &:hover
     cursor: pointer
     +bg(lighten($active,10%))
@@ -33,14 +56,11 @@
     & .tabs-item__title
       color: #006064
 
-.tabs-item__body
-  +pro
-  +center
-  position: relative
+
 //------.tabs-item__title--------
 .tabs-item__title
   +center
-  min-height: 40px
+  // min-height: 40px
   width :100%
   padding: 0 10px
   position: relative
@@ -59,15 +79,13 @@
   &__info
     font-size: 14px
     font-weight: 300
+    margin: 0 0 5px 0
   &.act
     z-index: 10000
     +bg(lighten($active,30%))
     border-bottom-right-radius: 5px
     border-bottom-left-radius: 5px
-    +absolute(auto,auto,40px,0,auto,0%,0%)
-
-
-
+    +absolute(100%,auto,40px,0,auto,0%,0%)
 
 
 

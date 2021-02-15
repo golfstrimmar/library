@@ -1,0 +1,58 @@
+
+// ключевые парамертры
+// размеры селекта
+// .select
+//   width: 200px
+// отступ выпадашки
+// .new-select__list
+  // +absolute(100%,auto,15px,0px,auto,0%,0%)
+
+// величина обертки для селекта
+// .block__select
+//   width: 200px
+
+
+
+
+
+
+  
+.block__select
+  position: relative
+  width: 200px
+.block__icon
+  font-size: 15px
+  +absolute(15px,15px,50%,auto,5px,0%,-50%)
+  transition: all 0.2s ease-in-out
+  z-index:-1
+  &:hover
+    cursor: pointer
+.img-active
+  transform: translateY(-50%) rotate(180deg)
+  // z-index: 2
+.select 
+  +pro
+  +alic
+  +border(1px, #546E7A)
+  width: 200px
+  +bg(transparent)
+  position: relative
+.new-select
+  // +bg(#B9F6CA)
+  +bg(transparent)
+  +pro
+  &.on
+    // +bg($active)
+  &:hover
+    cursor: pointer
+.new-select__list
+  border: 1px solid #546E7A
+  +absolute(100%,auto,15px,0px,auto,0%,0%)
+  z-index: 2
+  +bg(#BCAAA4)
+.new-select__item
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    +bg(lighten($active , 30%))
+    color: darken($active, 30%)
