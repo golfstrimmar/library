@@ -1,0 +1,33 @@
+.card 
+  max-width:200px
+  min-height:350px
+  +border(1px, blue)
+  +bg(white)
+  border-radius: 5px
+  padding: 0 10px	
+  position: relative
+  * 
+    text-align: center
+.card__img
+  +background-img("/../assets/img/img-1.jpg")
+  min-height:150px
+  margin: 0  -10px
+  // margin: 0 auto
+  display: block
+  border-top-right-radius: 5px
+  border-top-left-radius: 5px
+  // width: 40px
+  // height: 40px
+.card__title
+  font-size: 16px
+  padding: 10px 0 15px 0
+  text-align: center
+.card__text
+  text-align: left
+  color: coral
+.card__button
+  padding:  10px 20px
+  bottom: 10px
+  left:50%
+  position: absolute
+  transform: translateX(-50%)
