@@ -3,51 +3,65 @@ import $ from "jquery";
 $(".select").each(function () {
   const _this = $(this),
     selectOption = _this.find("option"),
+    
     selectOptionLength = selectOption.length,
     selectedOption = selectOption.filter(":selected"),
-    duration = 200; // длительность анимации
- 
-  
+    duration = 150; // длительность анимации
+
   _this.hide();
   _this.wrap('<div class="select"></div>');
   $("<div>", {
     class: "new-select",
-    text: _this.children("option:disabled").text(),
-  }).insertAfter(_this);
+    text: _this.children("option:selected").text(),
+  })
+    .prepend(
+      $("<img>", {
+        class: "new-select__img",
+        src: _this.children("option:selected").val(),
+      })
+    )
+    .insertAfter(_this);
 
   const selectHead = _this.next(".new-select");
   $("<div>", {
     class: "new-select__list",
-
   }).insertAfter(selectHead);
 
   const selectList = selectHead.next(".new-select__list");
-  for (let i = 1; i < selectOptionLength; i++) {
+  for (let i = 0; i < selectOptionLength; i++) {
+   
     $("<div>", {
       class: "new-select__item",
       html: $("<span>", {
         text: selectOption.eq(i).text(),
       }),
     })
-      .attr("data-value", selectOption.eq(i).val())
+      .attr("data-value", selectOption.eq(i).text())
+      .prepend(
+        $("<img>", {
+          class: "new-select__img",
+          src: selectOption.eq(i).val(),
+        })
+      )
       .appendTo(selectList);
-  }
+      
+  
+    }
 
   const selectItem = selectList.find(".new-select__item");
   selectList.slideUp(0);
-
-
-
   selectHead.on("click", function () {
     if (!$(this).hasClass("on")) {
       $(this).addClass("on");
       selectList.slideDown(duration);
 
       selectItem.on("click", function () {
-        let chooseItem = $(this).data("value").addClass("choosen"); 
+        let chooseItem = $(this).data("value");
 
         $("select").val(chooseItem).attr("selected", "selected");
-        selectHead.text($(this).find("span").text());
+        selectHead.html(
+          $(this).html()
+          );
 
         selectList.slideUp(duration);
         selectHead.removeClass("on");
@@ -57,30 +71,4 @@ $(".select").each(function () {
       selectList.slideUp(duration);
     }
   });
-
 });
-
-$(document).ready(function () {
-$(".select").on("click", function () {
-  let selectImg = $(this).siblings(".block__icon");
-  selectImg.toggleClass("img-active")
-});
-});
-
-
-
- $(document).mouseup(function (e) {
-   var div = $(".select"); // тут указываем ID элемента
-   if (
-     !div.is(e.target) && // если клик был не по нашему блоку
-     div.has(e.target).length === 0
-   ) {
-     $(".new-select").removeClass("on");
-     $(".new-select__list").slideUp(300);
-   }
- });
-
-
-
-
-
