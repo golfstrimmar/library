@@ -4,7 +4,7 @@ import $ from "jquery";
 
 $(Document).ready(function () {
   $(".slider-js-1").slick({
-    dots: true,
+    // dots: true,
     // arrows: false,
     slidesToShow: 5,
     speed: 800,
@@ -41,13 +41,10 @@ $(Document).ready(function () {
 
   });
 
-   $("<i>", {
-     class: $(".slider-js-1 ").attr("data-prev"),
-   }).appendTo(".slider-js-1  .slick-prev");
-   $("<i>", {
-     class: $(".slider-js-1").attr("data-next"),
-   }).appendTo(".slider-js-1 .slick-next");
-
+$(".slider-js-1 .slick-slide").on("click", function () {
+  const index = $(this).attr("data-slick-index");
+  $(".slider-js-1").slick("slickGoTo", index);
+});
 
 
 
@@ -87,15 +84,6 @@ $(Document).ready(function () {
     //   );
     // },
   });
-
-   $("<i>", {
-     class: $(".slider-js-2").attr("data-prev"),
-   }).appendTo(".slider-js-2  .slick-prev");
-   $("<i>", {
-     class: $(".slider-js-2").attr("data-next"),
-   }).appendTo(".slider-js-2  .slick-next");
-
-
 
 
 });

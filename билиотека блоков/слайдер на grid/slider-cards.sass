@@ -60,28 +60,48 @@ $purple: #55198A
     +pro
     min-height: 400px
     +bg(blue)
+
   .slick-arrow
+    position: relative
     position: absolute
     top:50%
     transform: translateY(-50%)
     z-index: 20
     font-size: 0
     border-radius: 50%
-    +bg( lighten($purple, 10%) )
     transition: all 0.2s ease-in-out
-    i
-      font-size: 30px
+    width: 52px
+    height: 44px
+    background: #fff
+    border-radius: 6px
+    &::after
+      font-family: icomoon
+      position: absolute
+      font-size: 20px
+      width: 20px
+      height: 20px
+      top: 50% 
+      left: 50%
+      z-index: 22
+      transform: translate(-50%,-50%)
+      color: $active
       transition: all 0.2s ease-in-out
     &:hover
       cursor: pointer
-      +bg( lighten($purple, 30%) )
       opacity: .5
-      i
-        color: $active
+      &::after
+        opacity: .8
   .slick-prev
-    left: 20px
+    left: -67px
+    &::after
+      content: '\e90e'
+      // content: '\e90c'
   .slick-next
-    right: 20px
+    right: -67px
+    &::after
+      content: '\e910'
+      // content: '\e91a'
+
   .slick-dots
     position: absolute
     bottom: -50px
@@ -103,6 +123,15 @@ $purple: #55198A
       +bg(transparent)
       +border(3px ,$purple )
   
+
+
+
+
+
+
+
+
+
 // .slick-dots li:not(.slick-active)
 //     display: none
 // .slick-active

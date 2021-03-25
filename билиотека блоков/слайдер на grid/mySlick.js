@@ -39,10 +39,5 @@ $(Document).ready(function () {
     // },
   });
 
-   $("<i>", {
-     class: $(".slider-js-1").attr("data-prev"),
-   }).appendTo(".slider-js-1  .slick-prev");
-   $("<i>", {
-     class: $(".slider-js-1").attr("data-next"),
-   }).appendTo(".slider-js-1  .slick-next");
+  
 });
