@@ -159,3 +159,23 @@
     font-weight: 300
   &.act
     +bg(lighten($active,30%))
+
+// горизонтаьный аккордеон
+.tabs
+    &__items
+      display: grid
+      grid-template-columns: repeat(4, auto) 
+    &__item
+      +bg(green)
+    &__body
+    &__block
+      transition: all 0.2s ease-in-out
+      p
+
+
+
+
+
+
+
+

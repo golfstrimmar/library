@@ -1,0 +1,19 @@
+section#contacts.contacts
+  .contacts__wrapper
+      .contacts__body.catalog__container
+        form.connect__form
+          .connect__form-item
+            input#name(type='text' required='' placeholder=' Denzel Washington')
+            label(for='name') What is your name?
+          .connect__form-item
+            input#email(type='email' required='' placeholder=' thebestmail@mail.com')
+            label(for='email') What is your email?
+          .connect__form-item
+            textarea#message(type='text' required='' placeholder=' Your awesome         message' cols=' 40' rows='6')
+            label(for='message') Write your message
+          .connect__form-item.connect__file-add
+            input#customFile.custom-file-input(type='file')
+            label.name__text(for='customFile') Add "attachment
+            .custom-file
+          .form__submit-button
+            button#submit-button.btn-primary.btn-primary-all(type='submit') Send message
